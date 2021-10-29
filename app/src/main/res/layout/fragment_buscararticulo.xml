@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_buscararticulo">
+
+    <LinearLayout
+        android:id="@+id/ly_contenedor"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="56dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_200"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/et_coditem"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.98"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:imeOptions="actionGo"
+                android:background="@drawable/text_border"
+                android:inputType="text|textAutoComplete"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/ibt_scan"
+                android:background="@drawable/estilo_boton_bordes_redondeados"
+                android:src="@drawable/escanear" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_articulos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp" />
+
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/pb_buscar"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:indeterminate="false" />
+            <FrameLayout
+                android:id="@+id/fragment_marca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

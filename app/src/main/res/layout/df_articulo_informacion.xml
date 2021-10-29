@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:id="@+id/fragment_buscararticulo">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/estibo_frame_bordes"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent">
+
+            <TextView
+                android:background="@drawable/estiolo_textview_titulo"
+                android:id="@+id/tv_info_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos por Marcas"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:paddingTop="11dp"
+                android:paddingBottom="11dp"
+                android:textColor="@color/white" />
+
+            <ListView
+                android:id="@+id/lv_info_marca"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+
+
+
+</FrameLayout>

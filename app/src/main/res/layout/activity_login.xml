@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.login">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:paddingTop="30dp"
+            android:weightSum="1">
+
+            <ImageView
+
+                android:id="@+id/iv_login"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="0.63"
+                android:src="@mipmap/ic_login_black" />
+
+            <ImageView
+
+                android:id="@+id/iv_login2"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/iv_login"
+                android:src="@mipmap/oie_transparent" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/layout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:textStyle="italic"
+
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/et_usuario"
+            android:layout_centerHorizontal="true"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_mensaje"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:drawableRight="@mipmap/ic_user"
+            android:ems="10"
+            android:hint="Correo Electrónico"
+            android:inputType="textAutoComplete|textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_centerHorizontal="true"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_usuario"
+            android:drawableRight="@mipmap/ic_pass"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:maxWidth="450dp"
+            android:inputType="textPassword" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/black"
+        app:srcCompat="@mipmap/ic_servidor2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ProgressBar
+        android:id="@+id/pb_iniciar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="183dp"
+        android:layout_height="182dp"
+        android:visibility="invisible"
+        app:layout_anchor="@+id/relativeLayout"
+        app:layout_anchorGravity="center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

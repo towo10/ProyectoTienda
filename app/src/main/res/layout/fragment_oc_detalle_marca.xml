@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ly_oc_marca"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_oc_marca_cat_subcat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indumentaria - Dorso Superior"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_oc_marca_producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Polo Cuello V"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_oc_marca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hueso de Perro"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                tools:ignore="Suspicious0dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/tv_oc_marca_precio"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="S/. 50000.00"
+                android:textColor="@color/purple_200"
+                android:textSize="16dp"
+                android:textAlignment="textEnd"
+                android:layout_gravity="bottom"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

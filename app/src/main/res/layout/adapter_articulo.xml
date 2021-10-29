@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_producto_articulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jean Razgado Desteñido con Aplicaciones"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:id="@+id/ly_principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_principal_articulo"
+                android:layout_gravity="center_vertical"
+                android:layout_width="160dp"
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+
+                android:padding="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/ly_info"
+                android:orientation="vertical"
+                android:paddingEnd="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ly_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_codigo_articulo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Código 1"
+                        android:textSize="15sp"
+                        android:maxWidth="178dp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/tv_anulado_articulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Anulado"
+                        android:textColor="#F44336"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:visibility="invisible"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_categoria_articulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Indumentaria"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/tv_subcategoria_articulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pantalón"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_adicional_articulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 unidades, 5 cajas \nTalles: XXL,XL\nColores:Rojo, Azul"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

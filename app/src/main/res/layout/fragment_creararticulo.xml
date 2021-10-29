@@ -1,0 +1,229 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentcrear_articulo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sebasoft.tienda11.ui.fragment.fragment_CrearArticulo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="56dp"
+            android:orientation="vertical">
+
+
+            <TabHost
+                android:id="@+id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/purple_200"
+                        app:tabIconTint="@android:color/tab_indicator_text"
+                        app:tabIndicator="@color/white"
+                        app:tabRippleColor="@color/fondoprincipal"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabTextColor="@android:color/darker_gray"
+                        />
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnGaleria"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginEnd="3dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Seleccionar imágenes"
+                                />
+                            <GridView
+                                android:id="@+id/gvImagenes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:numColumns="3"
+                                android:columnWidth="100dp"
+                                android:verticalSpacing="5dp"
+                                android:horizontalSpacing="5dp"
+                                />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_categoria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:textSize="15sp"
+                                    android:text="Categoria" />
+
+                                <Spinner
+                                    android:id="@+id/sp_categoria"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_below="@+id/tv_categoria"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="20sp" />
+                                <TextView
+                                    android:id="@+id/tv_subcategoria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_below="@+id/sp_categoria"
+                                    android:textSize="15sp"
+                                    android:text="SubCategoria" />
+
+                                <Spinner
+                                    android:id="@+id/sp_subcategoria"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_below="@+id/tv_subcategoria"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="0dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="20sp" />
+
+                                <EditText
+                                    android:id="@+id/et_producto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sp_subcategoria"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:inputType="text|textPersonName"
+                                    android:textSize="20sp"
+                                    android:maxLines="1"
+                                    android:hint="Nombre del Producto"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/et_modelo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/et_producto"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="20sp"
+                                    android:inputType="text"
+                                    android:maxLines="1"
+                                    android:hint="Modelo (opcional)"
+                                    />
+
+                                <EditText
+                                    android:id="@+id/et_observacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/et_modelo"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:textSize="20sp"
+                                    android:hint="Observaciones (opcional)"
+                                    android:maxLines="10"
+                                    android:scrollbars="none"
+                                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+
+                                    />
+
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/tab3"
+                            android:layout_width="340dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="Adicionales"
+                                android:textAlignment="center"
+                                android:textSize="30sp" />
+
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@android:drawable/ic_menu_save"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ProgressBar
+        android:id="@+id/pb_guardar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        app:layout_anchor="@+id/relativeLayout"
+        app:layout_anchorGravity="center" />
+
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@android:drawable/ic_menu_send"
+        android:title="Inicio" />
+
+    <item android:title="Producto">
+        <menu>
+            <item
+                android:id="@+id/nav_nuevo"
+                android:icon="@drawable/gift"
+                android:title="Nuevo" />
+            <item
+                android:id="@+id/nav_listarpro"
+                android:icon="@drawable/boxadd"
+                android:title="Listar Nuevos" />
+            <item
+                android:id="@+id/nav_buscar"
+                android:icon="@drawable/binoculars"
+                android:title="Buscar" />
+        </menu>
+
+    </item>
+    <item android:title="Orden de Compra">
+        <menu>
+            <item
+                android:id="@+id/nav_listaroc"
+                android:icon="@drawable/boxadd"
+                android:title="Listar" />
+            <item
+                android:id="@+id/nav_escanear"
+                android:icon="@drawable/escanear"
+                android:title="Escanear" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detalle de Existencias"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:id="@+id/tv_info_marca_exis_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7 Unidades de Color Rojo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:id="@+id/tv_info_marca_exis_cuerpo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XL(2) - XXXL(100) - XL(2) - XXXL(100) - XL(2) - XXXL(100) - XL(2) - XXXL(100)"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        />
+</LinearLayout>
