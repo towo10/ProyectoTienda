@@ -39,7 +39,7 @@ public class TableDynamic {
     private void newCell(){
         txtcell = new TextView(context);
         txtcell.setGravity(Gravity.CENTER);
-        txtcell.setTextSize(25);
+        txtcell.setTextSize(16);
     }
     private void createHeader(){
         indexC=0;
