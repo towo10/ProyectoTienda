@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_oc_marca_color"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Negro"
+            android:textColor="@color/black"
+            android:textSize="21dp"
+            tools:ignore="Suspicious0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/tv_oc_marca_color_precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15000 Soles"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tb_oc_marca_talle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -22,9 +22,11 @@ import com.sebasoft.tienda11.esquema.Aplicacion;
 import com.sebasoft.tienda11.esquema.DetalleOrdenCompra;
 import com.sebasoft.tienda11.esquema.OrdenCompra;
 import com.sebasoft.tienda11.esquema.TableDynamic;
+import com.sebasoft.tienda11.esquema.ordencompra_colores;
 import com.sebasoft.tienda11.esquema.ordencompra_marca;
 import com.sebasoft.tienda11.ui.controller.adapter_OC_rv;
 import com.sebasoft.tienda11.ui.controller.adapter_oc_marca;
+import com.sebasoft.tienda11.ui.controller.adapter_oc_marca_color;
 
 import java.util.ArrayList;
 
@@ -65,6 +67,7 @@ public class fragment_oc_detalle extends Fragment {
         rv_listar.setAdapter(new adapter_oc_marca(listamarca, new adapter_oc_marca.OnItemClickListener() {
             @Override
             public void onItemClick(ordencompra_marca item) {
+
 /*
                 Fragment frag = new fragment_oc_detalle(item);
                 FragmentManager fmanager = getFragmentManager();
@@ -76,43 +79,8 @@ public class fragment_oc_detalle extends Fragment {
 
  */
 
-
             }
         }));
-
-
-
-
-
-        //listaDetalle = item.getListaoc();
-
-        //detalle = listaDetalle.get(0);
-
-        //TextView tv_marca = (TextView) view.findViewById(R.id.tv_oc_marca);
-        //tb_datos = (TableLayout) view.findViewById(R.id.tb_oc_datos);
-
-        //tv_marca.setText(detalle.getMarca());
-
-        //TableDynamic tableDynamic = new TableDynamic(tb_datos,getContext());
-        //tableDynamic.addHeader(header);
-        //tableDynamic.addData(getOCdetalle());
-        //tableDynamic.backGroundHeader(Color.rgb(55,0,179));
-        //tableDynamic.backGroundData(Color.WHITE,Color.rgb(179,191,255));
-
         return view;
     }
-    /*
-    private ArrayList<String []> getOCdetalle(){
-        rows.add(new String[]{"S","5","100","500"});
-        rows.add(new String[]{"M","5","100","500"});
-        rows.add(new String[]{"L","5","100","500"});
-        rows.add(new String[]{"XL","5","100","500"});
-        rows.add(new String[]{"XL","5","100","500"});
-        rows.add(new String[]{"","","Total","2000"});
-
-        return rows;
-    }
-    */
-
-
 }

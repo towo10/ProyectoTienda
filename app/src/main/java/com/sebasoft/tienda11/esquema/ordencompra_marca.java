@@ -26,19 +26,21 @@ public class ordencompra_marca {
         this.moneda = moneda;
         this.jcolor = jcolor;
         onDetalleOC(jcolor);
+
     }
 
     private void onDetalleOC(JSONArray jdata){
-        listacolor = new ArrayList<>();
+        listacolor = new ArrayList<ordencompra_colores>();
         ordencompra_colores detalle;
         try {
             for (int i = 0; i < jdata.length(); i++) {
                 detalle = new ordencompra_colores(
                         i,
-                        jdata.getJSONObject(i).getString("codigo"),
+                        jdata.getJSONObject(i).getString("color_codigo"),
                         jdata.getJSONObject(i).getString("color"),
                         jdata.getJSONObject(i).getString("subtotal"),
                         jdata.getJSONObject(i).getJSONArray("talles"));
+
                 listacolor.add(detalle);
             }
         }catch (JSONException e){

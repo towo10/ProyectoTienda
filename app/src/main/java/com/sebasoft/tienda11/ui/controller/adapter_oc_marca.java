@@ -6,9 +6,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sebasoft.tienda11.R;
+import com.sebasoft.tienda11.esquema.ordencompra_colores;
 import com.sebasoft.tienda11.esquema.ordencompra_marca;
 
 import java.util.ArrayList;
@@ -37,13 +39,13 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
 
     @Override
     public void onBindViewHolder(@NonNull marca_vh holder, int position) {
-
         ordencompra_marca item = listamarca.get(position);
 
-        holder.tv_cat_sub.setText(item.getCategoria() + " - "+item.getSubcategoria());
         holder.tv_marca.setText(item.getMarca());
         holder.tv_producto.setText(item.getProducto());
         holder.tv_precio.setText(item.getSubtotal() +" "+item.getMoneda());
+        holder.rv_color.setAdapter(new adapter_oc_marca_color(item.getListacolor()));
+        holder.rv_color.setLayoutManager(new LinearLayoutManager(holder.rv_color.getContext()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,17 +61,16 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
 
     static class marca_vh extends RecyclerView.ViewHolder{
 
-        TextView tv_cat_sub;
         TextView tv_marca,tv_producto,tv_precio;
+        RecyclerView rv_color;
 
         public marca_vh(@NonNull View itemView) {
             super(itemView);
-            tv_cat_sub = itemView.findViewById(R.id.tv_oc_marca_cat_subcat);
+
             tv_marca = itemView.findViewById(R.id.tv_oc_marca);
             tv_producto = itemView.findViewById(R.id.tv_oc_marca_producto);
             tv_precio = itemView.findViewById(R.id.tv_oc_marca_precio);
-
-
+            rv_color = itemView.findViewById(R.id.rv_oc_marca_color);
 
         }
     }
