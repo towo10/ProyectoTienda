@@ -58,10 +58,31 @@
             android:layout_height="wrap_content"
             tools:listitem="@layout/fragment_oc_detalle_marca_color" />
 
-        22
+        <LinearLayout
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/ib_oc_modificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_edit"
+                />
+            <ImageButton
+                android:id="@+id/ib_oc_eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_delete"
+                />
+            <ImageButton
+                android:id="@+id/ib_oc_enviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_send"
+                />
 
-
-
+        </LinearLayout>
     </LinearLayout>
 
 

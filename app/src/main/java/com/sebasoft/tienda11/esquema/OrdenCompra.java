@@ -40,6 +40,12 @@ public class OrdenCompra {
                         jdata.getJSONObject(i).getString("marca"),
                         jdata.getJSONObject(i).getString("moneda"),
                         jdata.getJSONObject(i).getString("subtotal"),
+                        codigo,
+                        jdata.getJSONObject(i).getString("categorias_codigo"),
+                        jdata.getJSONObject(i).getString("subcategoria_codigo"),
+                        jdata.getJSONObject(i).getString("productos_codigo"),
+                        jdata.getJSONObject(i).getString("marca_codigo"),
+                        jdata.getJSONObject(i).getString("moneda_codigo"),
                         jdata.getJSONObject(i).getJSONArray("colores"));
                 listamarca.add(detalle);
             }
@@ -74,6 +80,7 @@ public class OrdenCompra {
     public void setListamarca(ArrayList<ordencompra_marca> listamarca) {
         this.listamarca = listamarca;
     }
+
 
     public JSONArray getJdetalle() {
         return jdetalle;

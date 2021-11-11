@@ -3,7 +3,9 @@ package com.sebasoft.tienda11.ui.controller;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marca_vh> {
 
     ArrayList<ordencompra_marca> listamarca;
+    private ordencompra_marca item;
     final adapter_oc_marca.OnItemClickListener listener;
 
     public interface OnItemClickListener{
@@ -39,7 +42,7 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
 
     @Override
     public void onBindViewHolder(@NonNull marca_vh holder, int position) {
-        ordencompra_marca item = listamarca.get(position);
+        item = listamarca.get(position);
 
         holder.tv_marca.setText(item.getMarca());
         holder.tv_producto.setText(item.getProducto());
@@ -52,6 +55,24 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
                // listener.onItemClick(item);
             }
         });
+        holder.ib_modificar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Modificar: "+ item.getOcompra_id(),Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.ib_eliminar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Eliminar",Toast.LENGTH_SHORT).show();
+            }
+        });
+        holder.ib_enviar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(), "Enviar",Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
     @Override
@@ -62,6 +83,7 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
     static class marca_vh extends RecyclerView.ViewHolder{
 
         TextView tv_marca,tv_producto,tv_precio;
+        ImageButton ib_modificar,ib_eliminar,ib_enviar;
         RecyclerView rv_color;
 
         public marca_vh(@NonNull View itemView) {
@@ -71,6 +93,9 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
             tv_producto = itemView.findViewById(R.id.tv_oc_marca_producto);
             tv_precio = itemView.findViewById(R.id.tv_oc_marca_precio);
             rv_color = itemView.findViewById(R.id.rv_oc_marca_color);
+            ib_modificar = itemView.findViewById(R.id.ib_oc_modificar);
+            ib_eliminar = itemView.findViewById(R.id.ib_oc_eliminar);
+            ib_enviar = itemView.findViewById(R.id.ib_oc_enviar);
 
         }
     }
