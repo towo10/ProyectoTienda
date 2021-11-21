@@ -67,7 +67,7 @@ public class fragment_oc_detalle extends Fragment {
                 // TODO ver si podemos agregar
 
             }
-        },getActivity()));
+        },getActivity(),getParentFragmentManager()));
         return view;
     }
 }

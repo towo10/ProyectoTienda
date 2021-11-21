@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -45,16 +46,18 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
     Vibrator vibrator;
     Context context;
     private Activity activity;
+    private FragmentManager frmanager;
 
     public interface OnItemClickListener{
         void onItemClick(ordencompra_marca item);
 
     }
 
-    public adapter_oc_marca(ArrayList<ordencompra_marca> listamarca, OnItemClickListener listener, Activity activity){
+    public adapter_oc_marca(ArrayList<ordencompra_marca> listamarca, OnItemClickListener listener, Activity activity,FragmentManager frmanager){
         this.listamarca = listamarca;
         this.listener = listener;
         this.activity = activity;
+        this.frmanager = frmanager;
     }
 
     @NonNull
@@ -90,7 +93,13 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
         holder.ib_modificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Modificar: "+Integer.toString(position),Toast.LENGTH_SHORT).show();
+                ordencompra_marca product = listamarca.get(position);
+                df_modificar_oc modificar_oc = new df_modificar_oc(product);
+                modificar_oc.show(frmanager,"modificar_oc");
+                android.app.Fragment frag = activity.getFragmentManager().findFragmentByTag("modificar_oc");
+                if (frag!=null){
+                    activity.getFragmentManager().beginTransaction().remove(frag).commit();
+                }
             }
         });
         holder.ib_eliminar.setOnClickListener(new View.OnClickListener() {
