@@ -17,4 +17,9 @@
     <string name="wednesday">Wednesday</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bienvenida">Un cordial saludo estimado usuario, ante todo le quiero agradecer por
+        ayudarnos a mejorar la aplicación que tiene como objetivo mejorar la satisfacción
+    de los pequeños comercios a la hora de realizar sus compras de productos, como tambien
+    disponer del stock, precios de compra y venta, insertar nuevos productos como también
+    asociarlos a sus respectivas fotos.</string>
 </resources>

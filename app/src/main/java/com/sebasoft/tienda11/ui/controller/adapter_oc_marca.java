@@ -78,7 +78,6 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
     public void onBindViewHolder(@NonNull marca_vh holder, @SuppressLint("RecyclerView") int position) {
         item = listamarca.get(position);
 
-
         holder.tv_marca.setText(item.getMarca());
         holder.tv_producto.setText(item.getProducto());
         holder.tv_precio.setText(item.getSubtotal() +" "+item.getMoneda());
@@ -94,7 +93,7 @@ public class adapter_oc_marca extends RecyclerView.Adapter<adapter_oc_marca.marc
             @Override
             public void onClick(View v) {
                 ordencompra_marca product = listamarca.get(position);
-                df_modificar_oc modificar_oc = new df_modificar_oc(product);
+                df_modificar_oc modificar_oc = new df_modificar_oc(product,activity,context);
                 modificar_oc.show(frmanager,"modificar_oc");
                 android.app.Fragment frag = activity.getFragmentManager().findFragmentByTag("modificar_oc");
                 if (frag!=null){

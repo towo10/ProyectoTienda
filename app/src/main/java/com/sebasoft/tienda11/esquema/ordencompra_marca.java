@@ -19,8 +19,9 @@ public class ordencompra_marca {
     }
 
     public ordencompra_marca(int id,String categoria,String subcategoria,String producto,
-                             String marca,String moneda,String subtotal,String ocompra_id,String cat_codigo,
-            String subcat_codigo,String pro_codigo,String marca_codigo,String moneda_codigo,JSONArray jcolor){
+                             String marca,String moneda,String subtotal,String ocompra_id,
+                             String cat_codigo,String subcat_codigo,String pro_codigo,
+                             String marca_codigo,String moneda_codigo,JSONArray jcolor){
         this.categoria = categoria;
         this.subcategoria = subcategoria;
         this.producto = producto;
