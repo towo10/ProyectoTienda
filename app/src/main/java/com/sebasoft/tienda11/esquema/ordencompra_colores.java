@@ -30,6 +30,7 @@ public class ordencompra_colores {
             for (int i = 0; i < jdata.length(); i++) {
                 detalle = new ordencompra_talles(
                         i,
+                        jdata.getJSONObject(i).getString("codigo_detalle"),
                         jdata.getJSONObject(i).getString("talla"),
                         jdata.getJSONObject(i).getString("cantidad"),
                         jdata.getJSONObject(i).getString("precio"),

@@ -36,9 +36,6 @@ public class fragment_oc_detalle extends Fragment {
     RecyclerView rv_listar;
     private Aplicacion app;
     private String Servidor,token,userid,tiendaid;
-    //private TableLayout tb_datos;
-    //private String[]header={"Talla","Cant.","Prec.Uni.","subTotal"};
-    //private ArrayList<String[]> rows = new ArrayList<>();
 
     public fragment_oc_detalle(OrdenCompra item){
         this.item = item;
@@ -67,20 +64,10 @@ public class fragment_oc_detalle extends Fragment {
         rv_listar.setAdapter(new adapter_oc_marca(listamarca, new adapter_oc_marca.OnItemClickListener() {
             @Override
             public void onItemClick(ordencompra_marca item) {
-
-/*
-                Fragment frag = new fragment_oc_detalle(item);
-                FragmentManager fmanager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fmanager.beginTransaction();
-                fragmentTransaction.replace(R.id.app_bar_main, frag);
-                fragmentTransaction.commit();
-                fragmentTransaction.addToBackStack(null);
-                app.setFragmenadd();
-
- */
+                // TODO ver si podemos agregar
 
             }
-        }));
+        },getActivity(),getParentFragmentManager()));
         return view;
     }
 }

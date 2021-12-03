@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -95,26 +94,6 @@ public class fragment_BuscarArticulo extends Fragment implements View.OnClickLis
                     return false;
                 }
             });
-
-            /*Ingresamos mas a detalle al producto*/
-            lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                        /* comentamos esto, para probar otra opcion
-                        Producto producto = new Producto();
-                        producto = (Producto) parent.getItemAtPosition(position);
-
-                        df_articulo articulo = new df_articulo(producto);
-                        articulo.show(getParentFragmentManager(),"articulo");
-                        android.app.Fragment frag = getActivity().getFragmentManager().findFragmentByTag("stock");
-                        if (frag!=null){
-                            getActivity().getFragmentManager().beginTransaction().remove(frag).commit();
-                        }*/
-                }
-            });
-
-
 
         return rootView;
     }
